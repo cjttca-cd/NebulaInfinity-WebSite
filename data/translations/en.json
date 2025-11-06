@@ -1,0 +1,97 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Creating the Future of Web3.0",
+    "subtitle": "Leveraging blockchain technology to create new value and realize a decentralized future",
+    "cta": "View Services"
+  },
+  "services": {
+    "title": "Services",
+    "subtitle": "Professional Web3.0 solutions we provide",
+    "smartContract": {
+      "title": "Smart Contract Design & Development",
+      "description": "Comprehensive support from design to implementation and auditing of secure and efficient smart contracts."
+    },
+    "web3Content": {
+      "title": "Web3.0 Content Planning & Development",
+      "description": "Planning and development of content utilizing the latest Web3.0 technologies including NFTs and DApps."
+    },
+    "consulting": {
+      "title": "Web3.0 Consulting",
+      "description": "Professional advice and support from blockchain technology adoption to operation."
+    },
+    "aiDevelopment": {
+      "title": "AI Development",
+      "description": "Design and development of solutions leveraging machine learning and AI technologies."
+    }
+  },
+  "projects": {
+    "title": "Projects",
+    "subtitle": "Showcasing our technical expertise",
+    "viewDetails": "View Details",
+    "status": {
+      "completed": "Completed",
+      "inProgress": "In Progress"
+    },
+    "backToProjects": "Back to Projects"
+  },
+  "about": {
+    "title": "About Us",
+    "subtitle": "Creating the future with Web3.0 technology",
+    "description": "Nebula Infinity is a specialized company in blockchain technology and Web3.0. We provide smart contract design and development, Web3.0 content planning and development including NFTs and DApps, and comprehensive Web3.0 consulting services.",
+    "mission": {
+      "title": "Mission",
+      "description": "Our mission is to create new value through blockchain technology and realize a decentralized future."
+    },
+    "vision": {
+      "title": "Vision",
+      "description": "We aim to realize a more transparent and fair society through Web3.0 technology."
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Feel free to discuss your project with us",
+    "form": {
+      "name": "Name",
+      "namePlaceholder": "John Doe",
+      "company": "Company / Organization",
+      "companyPlaceholder": "Your Company",
+      "email": "Email",
+      "emailPlaceholder": "your@email.com",
+      "phone": "Phone",
+      "phonePlaceholder": "+1 234 567 8900",
+      "inquiryType": "Inquiry Type",
+      "inquiryTypes": {
+        "smartContract": "Smart Contract Development",
+        "web3": "Web3.0 Consulting",
+        "ai": "AI Development",
+        "other": "Other"
+      },
+      "message": "Message",
+      "messagePlaceholder": "Tell us about your project details and requirements...",
+      "submit": "Submit",
+      "submitting": "Submitting...",
+      "success": "Thank you for your inquiry. Our team will contact you shortly.",
+      "error": "Failed to send. Please try again."
+    },
+    "info": {
+      "email": "Email",
+      "social": "Social Media"
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 Nebula Infinity. All rights reserved.",
+    "quickLinks": "Quick Links"
+  },
+  "common": {
+    "learnMore": "Learn More",
+    "viewAll": "View All",
+    "loading": "Loading..."
+  }
+}

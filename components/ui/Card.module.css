@@ -1,0 +1,24 @@
+.card {
+  padding: 32px;
+  border-radius: var(--radius-lg);
+  transition: all var(--transition-base);
+}
+
+.glass {
+  background: var(--glass-bg);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid var(--border);
+}
+
+.hover:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-xl);
+  border-color: var(--border-hover);
+}
+
+@media (max-width: 768px) {
+  .card {
+    padding: 24px;
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "nav": {
+    "home": "ホーム",
+    "about": "会社概要",
+    "services": "サービス",
+    "projects": "プロジェクト",
+    "contact": "お問い合わせ"
+  },
+  "hero": {
+    "title": "Web3.0の未来を創造する",
+    "subtitle": "ブロックチェーン技術で新しい価値を生み出し、分散型の未来を実現します",
+    "cta": "サービスを見る"
+  },
+  "services": {
+    "title": "サービス",
+    "subtitle": "私たちが提供する専門的なWeb3.0ソリューション",
+    "smartContract": {
+      "title": "スマートコントラクト設計・開発",
+      "description": "安全で効率的なスマートコントラクトの設計から実装、監査まで一貫してサポートします。"
+    },
+    "web3Content": {
+      "title": "Web3.0コンテンツ企画・開発",
+      "description": "NFT、DAppsなど、最新のWeb3.0技術を活用したコンテンツの企画・開発を行います。"
+    },
+    "consulting": {
+      "title": "Web3.0コンサルティング",
+      "description": "ブロックチェーン技術の導入から運用まで、専門的なアドバイスとサポートを提供します。"
+    },
+    "aiDevelopment": {
+      "title": "AI開発",
+      "description": "機械学習とAI技術を活用したソリューションの設計・開発を提供します。"
+    }
+  },
+  "projects": {
+    "title": "プロジェクト",
+    "subtitle": "私たちの技術力を示す実績",
+    "viewDetails": "詳細を見る",
+    "status": {
+      "completed": "完了",
+      "inProgress": "進行中"
+    },
+    "backToProjects": "プロジェクト一覧に戻る"
+  },
+  "about": {
+    "title": "会社概要",
+    "subtitle": "Web3.0技術で未来を創造する",
+    "description": "Nebula Infinityは、ブロックチェーン技術とWeb3.0の専門企業です。スマートコントラクトの設計・開発、NFTやDAppsなどのWeb3.0コンテンツの企画・開発、そしてWeb3.0全般のコンサルティングサービスを提供しています。",
+    "mission": {
+      "title": "ミッション",
+      "description": "ブロックチェーン技術で新しい価値を生み出し、分散型の未来を実現することをミッションとしています。"
+    },
+    "vision": {
+      "title": "ビジョン",
+      "description": "Web3.0技術を通じて、より透明で公平な社会の実現を目指しています。"
+    }
+  },
+  "contact": {
+    "title": "お問い合わせ",
+    "subtitle": "プロジェクトのご相談はお気軽にどうぞ",
+    "form": {
+      "name": "お名前",
+      "namePlaceholder": "山田 太郎",
+      "company": "会社名・組織名",
+      "companyPlaceholder": "株式会社〇〇",
+      "email": "メールアドレス",
+      "emailPlaceholder": "your@email.com",
+      "phone": "電話番号",
+      "phonePlaceholder": "090-1234-5678",
+      "inquiryType": "お問い合わせ種類",
+      "inquiryTypes": {
+        "smartContract": "スマートコントラクト開発",
+        "web3": "Web3.0コンサルティング",
+        "ai": "AI開発",
+        "other": "その他"
+      },
+      "message": "お問い合わせ内容",
+      "messagePlaceholder": "プロジェクトの詳細やご要望をお聞かせください...",
+      "submit": "送信",
+      "submitting": "送信中...",
+      "success": "お問い合わせありがとうございます。担当者より折り返しご連絡いたします。",
+      "error": "送信に失敗しました。もう一度お試しください。"
+    },
+    "info": {
+      "email": "メール",
+      "social": "ソーシャルメディア"
+    }
+  },
+  "footer": {
+    "copyright": "© 2024 Nebula Infinity. All rights reserved.",
+    "quickLinks": "クイックリンク"
+  },
+  "common": {
+    "learnMore": "詳しく見る",
+    "viewAll": "すべて見る",
+    "loading": "読み込み中..."
+  }
+}
