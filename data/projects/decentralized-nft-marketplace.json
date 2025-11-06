@@ -1,0 +1,85 @@
+{
+  "fullDescription": {
+    "ja": "完全分散型のNFTマーケットプレイスプラットフォームです。Ethereumブロックチェーン上に構築され、IPFSを利用した分散型ストレージにより、クリエイターとコレクターが直接取引できる環境を提供します。スマートコントラクトによる自動化されたロイヤリティ支払いシステムを実装し、従来のプラットフォームと比較して大幅に低い手数料を実現しています。",
+    "en": "A fully decentralized NFT marketplace platform built on the Ethereum blockchain. Utilizing IPFS for decentralized storage, it provides an environment where creators and collectors can trade directly. Features an automated royalty payment system through smart contracts, achieving significantly lower fees compared to traditional platforms."
+  },
+  "techStack": [
+    "Solidity - Smart Contract Development",
+    "Hardhat - Development Environment",
+    "IPFS - Decentralized Storage",
+    "Web3.js - Blockchain Integration",
+    "React - Frontend Framework",
+    "Ethers.js - Ethereum Library",
+    "OpenZeppelin - Smart Contract Security"
+  ],
+  "architecture": {
+    "image": "/images/projects/nft-marketplace-architecture.png",
+    "description": {
+      "ja": "レイヤー構造により、スマートコントラクト層、IPFSストレージ層、フロントエンド層が分離されており、高い拡張性とセキュリティを実現しています。",
+      "en": "The layered architecture separates smart contract layer, IPFS storage layer, and frontend layer, achieving high scalability and security."
+    }
+  },
+  "features": [
+    {
+      "ja": "ガスレス取引（メタトランザクション対応）",
+      "en": "Gasless transactions (Meta-transaction support)"
+    },
+    {
+      "ja": "自動ロイヤリティ配分システム",
+      "en": "Automated royalty distribution system"
+    },
+    {
+      "ja": "複数チェーン対応（Ethereum, Polygon）",
+      "en": "Multi-chain support (Ethereum, Polygon)"
+    },
+    {
+      "ja": "バッチミント機能による大量NFT発行",
+      "en": "Batch minting for bulk NFT creation"
+    },
+    {
+      "ja": "高度な検索・フィルタリング機能",
+      "en": "Advanced search and filtering capabilities"
+    }
+  ],
+  "screenshots": [
+    {
+      "image": "/images/projects/nft-marketplace-screenshot-1.png",
+      "caption": {
+        "ja": "マーケットプレイスのメイン画面",
+        "en": "Main marketplace interface"
+      }
+    },
+    {
+      "image": "/images/projects/nft-marketplace-screenshot-2.png",
+      "caption": {
+        "ja": "NFT詳細ページとオークション機能",
+        "en": "NFT details page with auction functionality"
+      }
+    },
+    {
+      "image": "/images/projects/nft-marketplace-screenshot-3.png",
+      "caption": {
+        "ja": "クリエイターダッシュボード",
+        "en": "Creator dashboard"
+      }
+    }
+  ],
+  "demo": {
+    "url": "https://demo.nebulainfinity.com/nft-marketplace",
+    "video": "/videos/nft-marketplace-demo.mp4"
+  },
+  "results": {
+    "ja": [
+      "月間取引量: 500+ ETH",
+      "登録クリエイター: 1,000+",
+      "発行NFT数: 10,000+",
+      "平均ガス代削減: 70%"
+    ],
+    "en": [
+      "Monthly trading volume: 500+ ETH",
+      "Registered creators: 1,000+",
+      "Minted NFTs: 10,000+",
+      "Average gas savings: 70%"
+    ]
+  }
+}

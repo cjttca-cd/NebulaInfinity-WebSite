@@ -1,0 +1,34 @@
+{
+  "projects": [
+    {
+      "id": "decentralized-nft-marketplace",
+      "slug": "decentralized-nft-marketplace",
+      "name": {
+        "ja": "分散型NFTマーケットプレイス",
+        "en": "Decentralized NFT Marketplace"
+      },
+      "icon": "/images/projects/nft-marketplace-icon.png",
+      "shortDescription": {
+        "ja": "Ethereum基盤の完全分散型NFTマーケットプレイスプラットフォーム。低手数料とセキュアな取引を実現。",
+        "en": "A fully decentralized NFT marketplace platform built on Ethereum. Features low fees and secure transactions."
+      },
+      "tags": ["Solidity", "NFT", "DApp", "IPFS", "Web3.js"],
+      "status": "completed"
+    },
+    {
+      "id": "ai-powered-defi-analytics",
+      "slug": "ai-powered-defi-analytics",
+      "name": {
+        "ja": "AI駆動DeFi分析プラットフォーム",
+        "en": "AI-Powered DeFi Analytics Platform"
+      },
+      "icon": "/images/projects/defi-analytics-icon.png",
+      "shortDescription": {
+        "ja": "機械学習を活用したDeFiプロトコルのリアルタイム分析・予測プラットフォーム。",
+        "en": "Real-time DeFi protocol analysis and prediction platform powered by machine learning."
+      },
+      "tags": ["AI", "DeFi", "Machine Learning", "Python", "React"],
+      "status": "in-progress"
+    }
+  ]
+}

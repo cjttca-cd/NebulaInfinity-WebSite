@@ -1,0 +1,89 @@
+{
+  "fullDescription": {
+    "ja": "機械学習とAI技術を活用した次世代DeFi分析プラットフォームです。複数のDeFiプロトコルからリアルタイムでデータを収集し、高度な予測モデルにより流動性プールのパフォーマンス、リスク評価、最適な投資戦略を提供します。独自のAIアルゴリズムにより、市場のトレンドを予測し、ユーザーに最適な取引タイミングを提案します。",
+    "en": "A next-generation DeFi analytics platform leveraging machine learning and AI technologies. Collects real-time data from multiple DeFi protocols and provides liquidity pool performance, risk assessment, and optimal investment strategies through advanced prediction models. Our proprietary AI algorithms predict market trends and suggest optimal trading timing to users."
+  },
+  "techStack": [
+    "Python - Backend & ML Models",
+    "TensorFlow - Machine Learning",
+    "React & Next.js - Frontend",
+    "The Graph - Blockchain Data Indexing",
+    "PostgreSQL - Data Storage",
+    "FastAPI - API Framework",
+    "Web3.py - Blockchain Integration"
+  ],
+  "architecture": {
+    "image": "/images/projects/defi-analytics-architecture.png",
+    "description": {
+      "ja": "マイクロサービスアーキテクチャを採用し、データ収集層、ML予測層、API層、フロントエンド層が独立して動作します。",
+      "en": "Adopts microservices architecture where data collection layer, ML prediction layer, API layer, and frontend layer operate independently."
+    }
+  },
+  "features": [
+    {
+      "ja": "リアルタイムDeFiプロトコル監視",
+      "en": "Real-time DeFi protocol monitoring"
+    },
+    {
+      "ja": "AI駆動の流動性プール分析",
+      "en": "AI-driven liquidity pool analysis"
+    },
+    {
+      "ja": "リスクスコアリングとアラートシステム",
+      "en": "Risk scoring and alert system"
+    },
+    {
+      "ja": "ポートフォリオ最適化提案",
+      "en": "Portfolio optimization recommendations"
+    },
+    {
+      "ja": "カスタマイズ可能なダッシュボード",
+      "en": "Customizable dashboard"
+    },
+    {
+      "ja": "複数チェーン対応（Ethereum, BSC, Polygon）",
+      "en": "Multi-chain support (Ethereum, BSC, Polygon)"
+    }
+  ],
+  "screenshots": [
+    {
+      "image": "/images/projects/defi-analytics-screenshot-1.png",
+      "caption": {
+        "ja": "リアルタイムダッシュボード",
+        "en": "Real-time dashboard"
+      }
+    },
+    {
+      "image": "/images/projects/defi-analytics-screenshot-2.png",
+      "caption": {
+        "ja": "AI予測モデルの可視化",
+        "en": "AI prediction model visualization"
+      }
+    },
+    {
+      "image": "/images/projects/defi-analytics-screenshot-3.png",
+      "caption": {
+        "ja": "ポートフォリオ最適化レポート",
+        "en": "Portfolio optimization report"
+      }
+    }
+  ],
+  "demo": {
+    "url": "https://demo.nebulainfinity.com/defi-analytics",
+    "video": "/videos/defi-analytics-demo.mp4"
+  },
+  "results": {
+    "ja": [
+      "予測精度: 85%以上",
+      "監視プロトコル数: 50+",
+      "アクティブユーザー: 500+",
+      "データ更新頻度: 30秒毎"
+    ],
+    "en": [
+      "Prediction accuracy: 85%+",
+      "Monitored protocols: 50+",
+      "Active users: 500+",
+      "Data update frequency: Every 30 seconds"
+    ]
+  }
+}
