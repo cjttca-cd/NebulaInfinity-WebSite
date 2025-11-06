@@ -1,0 +1,8 @@
+# Cloudflare Pages redirects
+
+# Redirect root to Japanese homepage
+/  /ja/  302
+
+# Handle trailing slashes
+/ja  /ja/  301
+/en  /en/  301
