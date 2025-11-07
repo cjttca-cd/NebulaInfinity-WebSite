@@ -2,19 +2,21 @@
   padding: 32px;
   border-radius: var(--radius-lg);
   transition: all var(--transition-base);
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
 }
 
 .glass {
-  background: var(--glass-bg);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  /* Linear style - solid background, not glass */
+  background: var(--surface);
   border: 1px solid var(--border);
 }
 
 .hover:hover {
-  transform: translateY(-4px);
-  box-shadow: var(--shadow-xl);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
   border-color: var(--border-hover);
+  background: var(--surface-hover);
 }
 
 @media (max-width: 768px) {

@@ -65,7 +65,7 @@ export default async function ProjectDetailPage({
             ← {t.projects.backToProjects}
           </Link>
           <h1 className={styles.title}>
-            <span className="gradient-text">{project.name[params.lang]}</span>
+            {project.name[params.lang]}
           </h1>
           <p className={styles.subtitle}>{project.shortDescription[params.lang]}</p>
           <div className={styles.meta}>

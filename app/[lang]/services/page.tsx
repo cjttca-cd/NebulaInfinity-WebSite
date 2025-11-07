@@ -101,7 +101,7 @@ export default function ServicesPage({ params }: { params: { lang: Language } })
       <section className={styles.hero}>
         <div className="container">
           <h1 className={styles.title}>
-            <span className="gradient-text">{t.services.title}</span>
+            {t.services.title}
           </h1>
           <p className={styles.subtitle}>{t.services.subtitle}</p>
         </div>

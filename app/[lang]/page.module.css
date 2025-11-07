@@ -15,7 +15,7 @@
 .heroBackground {
   position: absolute;
   inset: 0;
-  z-index: -1;
+  z-index: 0;
 }
 
 .heroBackground::before {
@@ -25,20 +25,23 @@
   background-image: url('/images/hero-bg.jpg');
   background-size: cover;
   background-position: center;
-  opacity: 0.3;
+  background-repeat: no-repeat;
+  z-index: 1;
 }
 
 .heroGradient {
   position: absolute;
   inset: 0;
-  background: var(--gradient-hero);
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2;
 }
 
 .heroContent {
   max-width: 900px;
   padding: 0 24px;
   text-align: center;
-  z-index: 1;
+  z-index: 10;
+  position: relative;
 }
 
 .heroTitle {
@@ -77,10 +80,7 @@
   font-size: clamp(2rem, 4vw, 3rem);
   font-weight: 700;
   margin-bottom: 16px;
-  background: var(--gradient-secondary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--text-primary);
 }
 
 .sectionSubtitle {
@@ -105,7 +105,7 @@
 .serviceIcon {
   font-size: 48px;
   margin-bottom: 24px;
-  filter: drop-shadow(0 0 20px rgba(45, 212, 191, 0.3));
+  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.1));
 }
 
 .serviceTitle {
@@ -154,8 +154,8 @@
   padding: 64px 32px !important;
   background: linear-gradient(
     135deg,
-    rgba(102, 126, 234, 0.1),
-    rgba(45, 212, 191, 0.1)
+    rgba(255, 255, 255, 0.03),
+    rgba(200, 200, 200, 0.03)
   ) !important;
 }
 
