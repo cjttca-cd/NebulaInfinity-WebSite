@@ -20,7 +20,7 @@ export default function AboutPage({ params }: { params: { lang: Language } }) {
       <section className={styles.hero}>
         <div className="container">
           <h1 className={styles.title}>
-            <span className="gradient-text">{t.about.title}</span>
+            {t.about.title}
           </h1>
           <p className={styles.subtitle}>{t.about.subtitle}</p>
         </div>

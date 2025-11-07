@@ -65,7 +65,7 @@ export default function ContactPage({ params }: { params: { lang: Language } }) 
       <section className={styles.hero}>
         <div className="container">
           <h1 className={styles.title}>
-            <span className="gradient-text">{t.contact.title}</span>
+            {t.contact.title}
           </h1>
           <p className={styles.subtitle}>{t.contact.subtitle}</p>
         </div>

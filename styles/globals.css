@@ -119,19 +119,13 @@ p {
   color: var(--text-secondary);
 }
 
-/* Gradient text */
+/* Text colors - Linear style (no gradient text) */
 .gradient-text {
-  background: var(--gradient-primary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--text-primary);
 }
 
 .gradient-text-alt {
-  background: var(--gradient-secondary);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--text-primary);
 }
 
 /* Solid card style (Linear style) */

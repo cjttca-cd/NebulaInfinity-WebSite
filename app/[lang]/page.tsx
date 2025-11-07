@@ -49,7 +49,7 @@ export default function HomePage({ params }: { params: { lang: Language } }) {
         </div>
         <div className={styles.heroContent}>
           <h1 className={styles.heroTitle}>
-            <span className="gradient-text">{t.hero.title}</span>
+            {t.hero.title}
           </h1>
           <p className={styles.heroSubtitle}>{t.hero.subtitle}</p>
           <div className={styles.heroActions}>
