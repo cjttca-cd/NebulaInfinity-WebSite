@@ -24,29 +24,30 @@
 }
 
 .md {
+  padding: 10px 20px;
+  font-size: 15px;
+}
+
+.lg {
   padding: 12px 24px;
   font-size: 16px;
 }
 
-.lg {
-  padding: 16px 32px;
-  font-size: 18px;
-}
-
-/* Variants */
+/* Variants - Linear style */
 .primary {
-  background: var(--gradient-secondary);
-  color: var(--text-primary);
-  box-shadow: var(--shadow-md);
+  background: var(--accent-primary);
+  color: #ffffff;
+  font-weight: 500;
 }
 
 .primary:hover:not(:disabled) {
-  box-shadow: var(--shadow-glow);
-  transform: translateY(-2px);
+  background: var(--accent-primary-hover);
+  box-shadow: var(--shadow-md);
 }
 
 .primary:active:not(:disabled) {
   transform: translateY(0);
+  box-shadow: var(--shadow-sm);
 }
 
 .secondary {
@@ -62,13 +63,13 @@
 
 .outline {
   background: transparent;
-  color: var(--accent-cyan);
-  border: 1px solid var(--accent-cyan);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
 }
 
 .outline:hover:not(:disabled) {
-  background: rgba(45, 212, 191, 0.1);
-  box-shadow: var(--shadow-glow);
+  background: var(--surface);
+  border-color: var(--border-hover);
 }
 
 .ghost {

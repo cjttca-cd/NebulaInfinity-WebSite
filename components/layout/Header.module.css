@@ -6,15 +6,14 @@
   z-index: var(--z-fixed);
   height: var(--nav-height);
   transition: all var(--transition-base);
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: var(--background);
+  border-bottom: 1px solid transparent;
 }
 
 .scrolled {
-  background: rgba(0, 0, 0, 0.8);
+  background: var(--background-secondary);
   border-bottom: 1px solid var(--border);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-md);
 }
 
 .container {
@@ -45,11 +44,11 @@
 .logoImage {
   height: 40px;
   width: auto;
-  filter: drop-shadow(0 0 10px rgba(45, 212, 191, 0.3));
+  filter: drop-shadow(0 0 8px rgba(94, 106, 210, 0.2));
 }
 
 .logoText {
-  background: var(--gradient-secondary);
+  background: var(--gradient-primary);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -81,7 +80,7 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: var(--gradient-secondary);
+  background: var(--accent-primary);
   transition: width var(--transition-base);
 }
 
@@ -110,7 +109,6 @@
 .langButton:hover {
   background: var(--surface-hover);
   border-color: var(--border-hover);
-  box-shadow: var(--shadow-glow);
 }
 
 .mobileMenuButton {
@@ -137,8 +135,7 @@
     left: 0;
     right: 0;
     flex-direction: column;
-    background: rgba(0, 0, 0, 0.95);
-    backdrop-filter: blur(10px);
+    background: var(--background-secondary);
     padding: 24px;
     gap: 24px;
     transform: translateX(-100%);

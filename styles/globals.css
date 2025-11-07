@@ -35,13 +35,13 @@ html {
 
 /* Selection styles */
 ::selection {
-  background: var(--accent-cyan);
-  color: var(--background);
+  background: var(--accent-primary);
+  color: #ffffff;
 }
 
 /* Focus styles */
 *:focus-visible {
-  outline: 2px solid var(--accent-cyan);
+  outline: 2px solid var(--accent-primary);
   outline-offset: 2px;
 }
 
@@ -134,13 +134,11 @@ p {
   background-clip: text;
 }
 
-/* Glass effect */
+/* Solid card style (Linear style) */
 .glass {
-  background: var(--glass-bg);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  background: var(--surface);
   border: 1px solid var(--border);
-  border-radius: 16px;
+  border-radius: var(--radius-lg);
 }
 
 /* Card hover effect */
@@ -149,8 +147,9 @@ p {
 }
 
 .card-hover:hover {
-  transform: translateY(-4px);
+  transform: translateY(-2px);
   box-shadow: var(--shadow-lg);
+  background: var(--surface-hover);
 }
 
 /* Button reset */
@@ -213,7 +212,7 @@ button {
 /* Loading spinner */
 .spinner {
   border: 2px solid var(--border);
-  border-top: 2px solid var(--accent-cyan);
+  border-top: 2px solid var(--accent-primary);
   border-radius: 50%;
   width: 24px;
   height: 24px;
