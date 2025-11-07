@@ -15,7 +15,7 @@
 .heroBackground {
   position: absolute;
   inset: 0;
-  z-index: -1;
+  z-index: 0;
 }
 
 .heroBackground::before {
@@ -26,21 +26,22 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  opacity: 1.0;
+  z-index: 1;
 }
 
 .heroGradient {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 1;
+  z-index: 2;
 }
 
 .heroContent {
   max-width: 900px;
   padding: 0 24px;
   text-align: center;
-  z-index: 1;
+  z-index: 10;
+  position: relative;
 }
 
 .heroTitle {
