@@ -36,7 +36,7 @@
 .logoImage {
   height: 36px;
   width: auto;
-  filter: drop-shadow(0 0 10px rgba(45, 212, 191, 0.3));
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.1));
 }
 
 .logoText {
@@ -84,7 +84,7 @@
 }
 
 .link:hover {
-  color: var(--accent-cyan);
+  color: var(--text-primary);
   padding-left: 4px;
 }
 
@@ -108,8 +108,8 @@
 
 .socialLink:hover {
   background: var(--surface-hover);
-  border-color: var(--accent-cyan);
-  color: var(--accent-cyan);
+  border-color: var(--text-primary);
+  color: var(--text-primary);
   transform: translateY(-2px);
   box-shadow: var(--shadow-glow);
 }

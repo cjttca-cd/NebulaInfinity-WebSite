@@ -33,15 +33,16 @@
   font-size: 16px;
 }
 
-/* Variants - Linear style */
+/* Variants - Linear style (white buttons with black text) */
 .primary {
-  background: var(--accent-primary);
-  color: #ffffff;
+  background: #ffffff;
+  color: #000000;
   font-weight: 500;
+  border: 1px solid var(--border);
 }
 
 .primary:hover:not(:disabled) {
-  background: var(--accent-primary-hover);
+  background: #f6f8fa;
   box-shadow: var(--shadow-md);
 }
 

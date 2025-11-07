@@ -102,7 +102,7 @@
 .serviceIcon {
   font-size: 48px;
   margin-bottom: 24px;
-  filter: drop-shadow(0 0 20px rgba(45, 212, 191, 0.3));
+  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.1));
 }
 
 .serviceTitle {

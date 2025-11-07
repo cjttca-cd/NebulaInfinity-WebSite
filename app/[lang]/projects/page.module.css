@@ -39,7 +39,7 @@
 .projectIcon {
   font-size: 48px;
   margin-bottom: 20px;
-  filter: drop-shadow(0 0 15px rgba(45, 212, 191, 0.3));
+  filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.1));
 }
 
 .projectHeader {
