@@ -241,3 +241,21 @@
     padding: 48px 24px !important;
   }
 }
+
+@media (max-width: 480px) {
+  .title {
+    font-size: clamp(2rem, 8.5vw, 2.8rem);
+  }
+
+  .bentoGrid {
+    gap: 16px;
+  }
+
+  .bentoCard {
+    padding: 20px;
+  }
+
+  .bentoFeatured {
+    padding: 22px !important;
+  }
+}

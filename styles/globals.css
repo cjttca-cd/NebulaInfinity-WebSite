@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700&family=Orbitron:wght@500;600;700&display=swap');
 @import './theme.css';
 
 * {
@@ -106,6 +107,12 @@ h6 {
   color: var(--text-primary);
 }
 
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading);
+}
+
 h1 {
   font-size: clamp(2rem, 4vw, 3rem);
 }
@@ -144,6 +151,7 @@ p {
   transition: box-shadow var(--transition-base),
     border-color var(--transition-base),
     background var(--transition-base);
+  cursor: pointer;
 }
 
 .card-hover:hover {
@@ -281,4 +289,17 @@ button {
 
 .mb-5 {
   margin-bottom: 48px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
 }

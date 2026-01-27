@@ -29,6 +29,10 @@
   background: var(--surface-hover);
 }
 
+.hover {
+  cursor: pointer;
+}
+
 @media (max-width: 768px) {
   .card {
     padding: 24px;

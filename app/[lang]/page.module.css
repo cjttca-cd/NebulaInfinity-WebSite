@@ -327,3 +327,25 @@
     padding: 48px 24px !important;
   }
 }
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: clamp(2rem, 8.5vw, 2.8rem);
+  }
+
+  .sectionTitle {
+    font-size: clamp(1.5rem, 6.5vw, 2.25rem);
+  }
+
+  .bentoGrid {
+    gap: 16px;
+  }
+
+  .bentoCard {
+    padding: 20px;
+  }
+
+  .bentoFeatured {
+    padding: 22px !important;
+  }
+}
