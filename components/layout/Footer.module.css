@@ -70,16 +70,18 @@
 }
 
 .linkList {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px 24px;
 }
 
+/* If links wrap (long labels), keep them readable */
 .link {
   color: var(--text-secondary);
   text-decoration: none;
   font-size: 15px;
   transition: color var(--transition-base);
+  display: inline-block;
 }
 
 .link:hover {
@@ -142,5 +144,10 @@
   .links {
     grid-template-columns: 1fr;
     gap: 32px;
+  }
+
+  .linkList {
+    grid-template-columns: 1fr;
+    gap: 12px;
   }
 }
