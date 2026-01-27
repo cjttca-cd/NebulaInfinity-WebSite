@@ -48,6 +48,7 @@
 
 .logoText {
   color: var(--text-primary);
+  font-family: var(--font-heading);
 }
 
 .nav {

@@ -10,6 +10,49 @@ import translationsEn from '@/data/translations/en.json';
 
 export default function ContactPage({ params }: { params: { lang: Language } }) {
   const t = params.lang === 'ja' ? translations : translationsEn;
+  const isJa = params.lang === 'ja';
+
+  const emailIcon = (
+    <svg className={styles.cardIcon} viewBox="0 0 24 24" aria-hidden="true">
+      <path
+        d="M4.5 7.5h15a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2h-15a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2z"
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.7"
+      />
+      <path
+        d="M4.5 9l7.5 5 7.5-5"
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.7"
+      />
+    </svg>
+  );
+
+  const socialIcon = (
+    <svg className={styles.cardIcon} viewBox="0 0 24 24" aria-hidden="true">
+      <path
+        d="M7 7.5h10a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2z"
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.7"
+      />
+      <path
+        d="M9.5 12h5M12 9.5v5"
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.7"
+      />
+    </svg>
+  );
 
   const [formData, setFormData] = useState({
     name: '',
@@ -64,9 +107,8 @@ export default function ContactPage({ params }: { params: { lang: Language } }) 
     <div className={styles.page}>
       <section className={styles.hero}>
         <div className="container">
-          <h1 className={styles.title}>
-            {t.contact.title}
-          </h1>
+          <span className={styles.eyebrow}>{isJa ? 'お問い合わせ' : 'Contact'}</span>
+          <h1 className={styles.title}>{t.contact.title}</h1>
           <p className={styles.subtitle}>{t.contact.subtitle}</p>
         </div>
       </section>
@@ -202,29 +244,33 @@ export default function ContactPage({ params }: { params: { lang: Language } }) 
             </div>
 
             <div className={styles.infoSection}>
-              <Card hover>
-                <h3 className={styles.infoTitle}>{t.contact.info.email}</h3>
-                <a href="mailto:info@nebulainfinity.com" className={styles.infoLink}>
-                  info@nebulainfinity.com
-                </a>
-              </Card>
-
-              <Card hover>
-                <h3 className={styles.infoTitle}>{t.contact.info.social}</h3>
-                <div className={styles.socialLinks}>
-                  <a
-                    href="https://twitter.com/N_I_COM"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={styles.socialLink}
-                  >
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
-                    </svg>
-                    X (Twitter)
+              <div className={styles.infoGrid}>
+                <Card hover className={`${styles.bentoCard} ${styles.bentoCompact}`}>
+                  <span className={styles.cardIconWrap}>{emailIcon}</span>
+                  <h3 className={styles.infoTitle}>{t.contact.info.email}</h3>
+                  <a href="mailto:info@nebulainfinity.com" className={styles.infoLink}>
+                    info@nebulainfinity.com
                   </a>
-                </div>
-              </Card>
+                </Card>
+
+                <Card hover className={`${styles.bentoCard} ${styles.bentoCompact}`}>
+                  <span className={styles.cardIconWrap}>{socialIcon}</span>
+                  <h3 className={styles.infoTitle}>{t.contact.info.social}</h3>
+                  <div className={styles.socialLinks}>
+                    <a
+                      href="https://twitter.com/N_I_COM"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.socialLink}
+                    >
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                      </svg>
+                      X (Twitter)
+                    </a>
+                  </div>
+                </Card>
+              </div>
             </div>
           </div>
         </div>

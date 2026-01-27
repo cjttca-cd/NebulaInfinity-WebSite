@@ -3,30 +3,41 @@
 }
 
 .hero {
-  padding: 120px 0 60px;
+  padding: 120px 0 70px;
   text-align: center;
 }
 
-.title {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 700;
-  margin-bottom: 24px;
-  color: var(--text-primary);
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 16px;
+  font-size: 0.85rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  font-weight: 600;
 }
 
-.subtitle {
+.heroTitle {
+  font-size: clamp(2.6rem, 5vw, 4rem);
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+  margin-bottom: 20px;
+}
+
+.heroSubtitle {
   font-size: clamp(1.125rem, 2vw, 1.5rem);
   color: var(--text-secondary);
-  max-width: 700px;
+  max-width: 760px;
   margin: 0 auto;
+  line-height: 1.7;
 }
 
-.section {
-  padding: 60px 0;
+.descriptionSection {
+  padding: 0 0 60px;
 }
 
 .descriptionCard {
-  padding: 48px !important;
+  padding: 48px;
   text-align: center;
   background: var(--background-secondary);
   border: 1px solid var(--border);
@@ -37,44 +48,198 @@
   font-size: 1.125rem;
   line-height: 1.8;
   color: var(--text-secondary);
-  max-width: 800px;
+  max-width: 860px;
   margin: 0 auto;
 }
 
-.grid {
+.bentoSection {
+  padding: 60px 0 72px;
+}
+
+.sectionHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.sectionTitle {
+  font-size: clamp(2rem, 3.6vw, 3rem);
+  font-family: var(--font-heading);
+}
+
+.sectionSubtitle {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.bentoGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 32px;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.bentoCard {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 28px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+
+.bentoFeatured {
+  grid-column: span 6;
+  grid-row: span 2;
+  padding: 32px;
+}
+
+.bentoCompact {
+  grid-column: span 3;
+}
+
+.cardIconWrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(202, 138, 4, 0.12);
+  color: var(--accent-primary);
+}
+
+.cardIcon {
+  width: 22px;
+  height: 22px;
 }
 
 .cardTitle {
-  font-size: 1.75rem;
+  font-size: 1.4rem;
   font-weight: 600;
-  margin-bottom: 16px;
   color: var(--text-primary);
 }
 
 .cardDescription {
   color: var(--text-secondary);
   line-height: 1.7;
-  font-size: 1.125rem;
+  font-size: 1.05rem;
+}
+
+.credentialsSection {
+  padding: 40px 0 80px;
+}
+
+.credentialsInner {
+  padding: 24px 28px;
+  border-radius: var(--radius-xl);
+  background: #ffffff;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+
+.credentialsTitle {
+  margin: 0 0 18px;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--text-tertiary);
+}
+
+.credentialsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.credentialItem {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: var(--radius-md);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  font-weight: 600;
+  color: var(--color-primary);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.credentialItem:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.credentialIcon {
+  width: 18px;
+  height: 18px;
+  color: var(--accent-primary);
+}
+
+@media (max-width: 1024px) {
+  .bentoFeatured {
+    grid-column: span 12;
+    grid-row: auto;
+  }
+
+  .bentoCompact {
+    grid-column: span 6;
+  }
+
+  .credentialsGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 
 @media (max-width: 768px) {
   .hero {
-    padding: 80px 0 40px;
+    padding: 90px 0 50px;
   }
 
-  .section {
-    padding: 40px 0;
+  .descriptionSection {
+    padding-bottom: 40px;
   }
 
   .descriptionCard {
-    padding: 32px !important;
+    padding: 32px;
   }
 
-  .grid {
+  .sectionHeader {
+    text-align: left;
+  }
+
+  .bentoSection {
+    padding: 40px 0 60px;
+  }
+
+  .bentoGrid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+  }
+
+  .bentoCompact {
+    grid-column: span 6;
+  }
+
+  .credentialsGrid {
     grid-template-columns: 1fr;
-    gap: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 80px 0 40px;
+  }
+
+  .bentoGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .bentoFeatured,
+  .bentoCompact {
+    grid-column: span 1;
   }
 }

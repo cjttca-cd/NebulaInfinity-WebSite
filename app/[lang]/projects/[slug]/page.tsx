@@ -43,6 +43,7 @@ export default async function ProjectDetailPage({
   params: { lang: Language; slug: string };
 }) {
   const t = params.lang === 'ja' ? translations : translationsEn;
+  const isJa = params.lang === 'ja';
   const project = projectsData.projects.find((p) => p.slug === params.slug);
 
   if (!project) {
@@ -57,6 +58,27 @@ export default async function ProjectDetailPage({
     projectDetails = null;
   }
 
+  const checkIcon = (
+    <svg className={styles.checkIcon} viewBox="0 0 24 24" aria-hidden="true">
+      <path
+        d="M6 12.5l4 4 8-9"
+        fill="none"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="1.8"
+      />
+    </svg>
+  );
+
+  const targetIcon = (
+    <svg className={styles.resultIconSvg} viewBox="0 0 24 24" aria-hidden="true">
+      <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" strokeWidth="1.7" />
+      <circle cx="12" cy="12" r="5" fill="none" stroke="currentColor" strokeWidth="1.7" />
+      <circle cx="12" cy="12" r="1.5" fill="currentColor" />
+    </svg>
+  );
+
   return (
     <div className={styles.page}>
       <section className={styles.hero}>
@@ -64,13 +86,14 @@ export default async function ProjectDetailPage({
           <Link href={`/${params.lang}/projects`} className={styles.backLink}>
             ← {t.projects.backToProjects}
           </Link>
+          <span className={styles.eyebrow}>{isJa ? 'プロジェクト詳細' : 'Project detail'}</span>
           <h1 className={styles.title}>
             {project.name[params.lang]}
           </h1>
           <p className={styles.subtitle}>{project.shortDescription[params.lang]}</p>
           <div className={styles.meta}>
             <span
-              className={`${styles.status} ${
+              className={`${styles.statusBadge} ${
                 project.status === 'completed' ? styles.completed : styles.inProgress
               }`}
             >
@@ -93,10 +116,17 @@ export default async function ProjectDetailPage({
         <>
           <section className={styles.section}>
             <div className="container">
-              <Card glass>
+              <div className={styles.sectionHeader}>
                 <h2 className={styles.sectionTitle}>
-                  {params.lang === 'ja' ? 'プロジェクト概要' : 'Project Overview'}
+                  {isJa ? 'プロジェクト概要' : 'Project overview'}
                 </h2>
+                <p className={styles.sectionSubtitle}>
+                  {isJa
+                    ? '背景と目標を踏まえた全体像です。'
+                    : 'A quick summary of the scope, goals, and impact.'}
+                </p>
+              </div>
+              <Card glass>
                 <p className={styles.fullDescription}>
                   {projectDetails.fullDescription[params.lang]}
                 </p>
@@ -106,12 +136,17 @@ export default async function ProjectDetailPage({
 
           <section className={styles.section}>
             <div className="container">
-              <h2 className={styles.sectionTitle}>
-                {params.lang === 'ja' ? '技術スタック' : 'Tech Stack'}
-              </h2>
-              <div className={styles.techGrid}>
+              <div className={styles.sectionHeader}>
+                <h2 className={styles.sectionTitle}>{isJa ? '技術スタック' : 'Tech stack'}</h2>
+                <p className={styles.sectionSubtitle}>
+                  {isJa
+                    ? '堅牢性と拡張性を両立する技術選定です。'
+                    : 'A curated stack that balances reliability and speed.'}
+                </p>
+              </div>
+              <div className={styles.bentoGrid}>
                 {projectDetails.techStack.map((tech: string, index: number) => (
-                  <Card key={index} hover>
+                  <Card key={index} hover className={`${styles.bentoCard} ${styles.bentoCompact}`}>
                     <div className={styles.techItem}>{tech}</div>
                   </Card>
                 ))}
@@ -121,14 +156,19 @@ export default async function ProjectDetailPage({
 
           <section className={styles.section}>
             <div className="container">
-              <h2 className={styles.sectionTitle}>
-                {params.lang === 'ja' ? '主な機能' : 'Key Features'}
-              </h2>
-              <div className={styles.featuresGrid}>
+              <div className={styles.sectionHeader}>
+                <h2 className={styles.sectionTitle}>{isJa ? '主な機能' : 'Key features'}</h2>
+                <p className={styles.sectionSubtitle}>
+                  {isJa
+                    ? '成果に直結する機能群を整理しています。'
+                    : 'Features designed to deliver measurable outcomes.'}
+                </p>
+              </div>
+              <div className={styles.bentoGrid}>
                 {projectDetails.features.map((feature: any, index: number) => (
-                  <Card key={index} hover>
+                  <Card key={index} hover className={`${styles.bentoCard} ${styles.bentoCompact}`}>
                     <div className={styles.feature}>
-                      <span className={styles.checkmark}>✓</span>
+                      <span className={styles.checkIconWrap}>{checkIcon}</span>
                       <span>{feature[params.lang]}</span>
                     </div>
                   </Card>
@@ -140,14 +180,19 @@ export default async function ProjectDetailPage({
           {projectDetails.results && (
             <section className={styles.section}>
               <div className="container">
-                <Card glass className={styles.resultsCard}>
-                  <h2 className={styles.sectionTitle}>
-                    {params.lang === 'ja' ? '実績・成果' : 'Results'}
-                  </h2>
+                <div className={styles.sectionHeader}>
+                  <h2 className={styles.sectionTitle}>{isJa ? '実績・成果' : 'Results'}</h2>
+                  <p className={styles.sectionSubtitle}>
+                    {isJa
+                      ? 'ビジネスに与えた効果をまとめています。'
+                      : 'Highlights of measurable business impact.'}
+                  </p>
+                </div>
+                <Card className={styles.resultsCard}>
                   <div className={styles.resultsList}>
                     {projectDetails.results[params.lang].map((result: string, index: number) => (
                       <div key={index} className={styles.resultItem}>
-                        <span className={styles.resultIcon}>🎯</span>
+                        <span className={styles.resultIconWrap}>{targetIcon}</span>
                         <span>{result}</span>
                       </div>
                     ))}
@@ -161,15 +206,29 @@ export default async function ProjectDetailPage({
 
       <section className={styles.ctaSection}>
         <div className="container">
-          <Card glass className={styles.ctaCard}>
-            <h2 className={styles.ctaTitle}>
-              {params.lang === 'ja'
-                ? '同様のプロジェクトをお考えですか？'
-                : 'Interested in a similar project?'}
-            </h2>
-            <Link href={`/${params.lang}/contact`}>
-              <Button size="lg">{t.nav.contact}</Button>
-            </Link>
+          <Card className={styles.ctaCard}>
+            <div>
+              <h2 className={styles.ctaTitle}>
+                {isJa
+                  ? '同様のプロジェクトをお考えですか？'
+                  : 'Interested in a similar project?'}
+              </h2>
+              <p className={styles.ctaDescription}>
+                {isJa
+                  ? '要件整理から実装まで並走します。'
+                  : 'We can plan, build, and launch the right workflow together.'}
+              </p>
+            </div>
+            <div className={styles.ctaActions}>
+              <Link href={`/${params.lang}/contact`}>
+                <Button size="lg">{t.nav.contact}</Button>
+              </Link>
+              <Link href={`/${params.lang}/services`}>
+                <Button size="lg" variant="outline">
+                  {t.nav.services}
+                </Button>
+              </Link>
+            </div>
           </Card>
         </div>
       </section>

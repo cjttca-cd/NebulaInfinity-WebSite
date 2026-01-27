@@ -23,6 +23,33 @@
   box-shadow: var(--shadow-xs);
 }
 
+.bentoCard {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.cardIconWrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(202, 138, 4, 0.12);
+  color: var(--accent-primary);
+}
+
+.cardIcon {
+  width: 22px;
+  height: 22px;
+}
+
 .hover:hover {
   box-shadow: var(--shadow-md);
   border-color: var(--border-hover);

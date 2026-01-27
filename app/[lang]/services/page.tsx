@@ -17,6 +17,7 @@ export async function generateMetadata({ params }: { params: { lang: Language } 
 
 export default function ServicesPage({ params }: { params: { lang: Language } }) {
   const t = params.lang === 'ja' ? translations : translationsEn;
+  const isJa = params.lang === 'ja';
 
   const featuredService = {
     title: t.services.smartContract.title,
@@ -175,15 +176,24 @@ export default function ServicesPage({ params }: { params: { lang: Language } })
     <div className={styles.page}>
       <section className={styles.hero}>
         <div className="container">
-          <h1 className={styles.title}>
-            {t.services.title}
-          </h1>
+          <span className={styles.eyebrow}>{isJa ? 'サービス' : 'Services'}</span>
+          <h1 className={styles.title}>{t.services.title}</h1>
           <p className={styles.subtitle}>{t.services.subtitle}</p>
         </div>
       </section>
 
       <section className={styles.section}>
         <div className="container">
+          <div className={styles.sectionHeader}>
+            <h2 className={styles.sectionTitle}>
+              {isJa ? '提供サービス' : 'Core services'}
+            </h2>
+            <p className={styles.sectionSubtitle}>
+              {isJa
+                ? '設計から運用まで一貫して支えるバンドルです。'
+                : 'A bundled set of services that covers design through operations.'}
+            </p>
+          </div>
           <div className={styles.bentoGrid}>
             <Card
               hover
@@ -237,20 +247,27 @@ export default function ServicesPage({ params }: { params: { lang: Language } })
 
       <section className={styles.ctaSection}>
         <div className="container">
-          <Card glass className={styles.ctaCard}>
-            <h2 className={styles.ctaTitle}>
-              {params.lang === 'ja'
-                ? 'サービスについてご相談ください'
-                : 'Discuss our services'}
-            </h2>
-            <p className={styles.ctaDescription}>
-              {params.lang === 'ja'
-                ? 'お客様のプロジェクトに最適なソリューションをご提案します。'
-                : 'We will propose the best solution for your project.'}
-            </p>
-            <Link href={`/${params.lang}/contact`}>
-              <Button size="lg">{t.nav.contact}</Button>
-            </Link>
+          <Card className={styles.ctaCard}>
+            <div>
+              <h2 className={styles.ctaTitle}>
+                {isJa ? 'サービスについてご相談ください' : 'Discuss our services'}
+              </h2>
+              <p className={styles.ctaDescription}>
+                {isJa
+                  ? 'お客様のプロジェクトに最適なソリューションをご提案します。'
+                  : 'We will propose the best solution for your project.'}
+              </p>
+            </div>
+            <div className={styles.ctaActions}>
+              <Link href={`/${params.lang}/contact`}>
+                <Button size="lg">{t.nav.contact}</Button>
+              </Link>
+              <Link href={`/${params.lang}/projects`}>
+                <Button size="lg" variant="outline">
+                  {t.nav.projects}
+                </Button>
+              </Link>
+            </div>
           </Card>
         </div>
       </section>

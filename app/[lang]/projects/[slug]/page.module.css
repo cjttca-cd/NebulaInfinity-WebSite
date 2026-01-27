@@ -10,7 +10,7 @@
   display: inline-block;
   color: var(--text-secondary);
   text-decoration: none;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
   transition: all var(--transition-base);
 }
 
@@ -19,9 +19,19 @@
   padding-left: 4px;
 }
 
+.eyebrow {
+  display: block;
+  margin-bottom: 16px;
+  font-size: 0.85rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-tertiary);
+  font-weight: 600;
+}
+
 .title {
   font-size: clamp(2.5rem, 5vw, 4rem);
-  font-weight: 700;
+  font-family: var(--font-heading);
   margin-bottom: 24px;
   color: var(--text-primary);
 }
@@ -40,11 +50,11 @@
   flex-wrap: wrap;
 }
 
-.status {
+.statusBadge {
   padding: 8px 16px;
   border-radius: var(--radius-full);
   font-size: 0.875rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .completed {
@@ -78,11 +88,23 @@
   padding: 60px 0;
 }
 
+.sectionHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
 .sectionTitle {
   font-size: clamp(1.75rem, 3vw, 2.5rem);
-  font-weight: 700;
-  margin-bottom: 32px;
+  font-family: var(--font-heading);
   color: var(--text-primary);
+}
+
+.sectionSubtitle {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  max-width: 680px;
 }
 
 .fullDescription {
@@ -91,22 +113,24 @@
   color: var(--text-secondary);
 }
 
-.techGrid {
+.bentoGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(12, minmax(0, 1fr));
   gap: 16px;
+}
+
+.bentoCard {
+  height: 100%;
+}
+
+.bentoCompact {
+  grid-column: span 3;
 }
 
 .techItem {
   color: var(--text-secondary);
   font-size: 0.938rem;
   line-height: 1.6;
-}
-
-.featuresGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 16px;
 }
 
 .feature {
@@ -117,15 +141,26 @@
   line-height: 1.6;
 }
 
-.checkmark {
+.checkIconWrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(5, 150, 105, 0.12);
   color: var(--success);
-  font-weight: bold;
   flex-shrink: 0;
-  font-size: 1.25rem;
+  margin-top: 2px;
+}
+
+.checkIcon {
+  width: 16px;
+  height: 16px;
 }
 
 .resultsCard {
-  padding: 48px !important;
+  padding: 40px;
 }
 
 .resultsList {
@@ -142,27 +177,71 @@
   color: var(--text-secondary);
 }
 
-.resultIcon {
-  font-size: 1.5rem;
+.resultIconWrap {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 10px;
+  background: rgba(202, 138, 4, 0.12);
+  color: var(--accent-primary);
+}
+
+.resultIconSvg {
+  width: 18px;
+  height: 18px;
 }
 
 .ctaSection {
-  padding: 80px 0;
+  padding: 64px 0 96px;
 }
 
 .ctaCard {
-  text-align: center;
-  padding: 64px 32px !important;
-  background: var(--accent-subtle) !important;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  padding: 48px;
+  border-radius: var(--radius-xl);
+  background: linear-gradient(120deg, rgba(15, 23, 42, 0.06), rgba(202, 138, 4, 0.12));
   border: 1px solid var(--border);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-md);
 }
 
 .ctaTitle {
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
-  font-weight: 700;
-  margin-bottom: 32px;
-  color: var(--text-primary);
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  font-family: var(--font-heading);
+  margin-bottom: 12px;
+}
+
+.ctaDescription {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  max-width: 520px;
+  margin: 0;
+}
+
+.ctaActions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+@media (max-width: 1024px) {
+  .bentoGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .bentoCompact {
+    grid-column: span 1;
+  }
+
+  .ctaCard {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 @media (max-width: 768px) {
@@ -170,13 +249,12 @@
     padding: 80px 0 40px;
   }
 
-  .techGrid,
-  .featuresGrid {
+  .bentoGrid {
     grid-template-columns: 1fr;
   }
 
   .resultsCard {
-    padding: 32px !important;
+    padding: 32px;
   }
 
   .resultsList {
@@ -188,6 +266,6 @@
   }
 
   .ctaCard {
-    padding: 48px 24px !important;
+    padding: 40px 24px;
   }
 }

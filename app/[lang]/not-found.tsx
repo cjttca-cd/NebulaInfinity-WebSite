@@ -6,9 +6,8 @@ export default function NotFound() {
   return (
     <div className={styles.container}>
       <div className={styles.content}>
-        <h1 className={styles.title}>
-          404
-        </h1>
+        <span className={styles.eyebrow}>404 ERROR</span>
+        <h1 className={styles.title}>404</h1>
         <h2 className={styles.subtitle}>
           <span className={styles.ja}>ページが見つかりません</span>
           <span className={styles.en}>Page Not Found</span>
