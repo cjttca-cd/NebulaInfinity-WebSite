@@ -11,6 +11,7 @@
   font-size: clamp(2.5rem, 5vw, 4rem);
   font-weight: 700;
   margin-bottom: 24px;
+  color: var(--text-primary);
 }
 
 .subtitle {
@@ -33,7 +34,6 @@
 .serviceIcon {
   font-size: 56px;
   margin-bottom: 24px;
-  filter: drop-shadow(0 0 20px rgba(255, 255, 255, 0.1));
 }
 
 .serviceTitle {
@@ -65,7 +65,7 @@
 }
 
 .checkmark {
-  color: var(--accent-cyan);
+  color: var(--success);
   font-weight: bold;
   flex-shrink: 0;
 }
@@ -77,17 +77,16 @@
 .ctaCard {
   text-align: center;
   padding: 64px 32px !important;
-  background: linear-gradient(
-    135deg,
-    rgba(102, 126, 234, 0.1),
-    rgba(45, 212, 191, 0.1)
-  ) !important;
+  background: var(--accent-subtle) !important;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
 }
 
 .ctaTitle {
   font-size: clamp(1.75rem, 3vw, 2.5rem);
   font-weight: 700;
   margin-bottom: 16px;
+  color: var(--text-primary);
 }
 
 .ctaDescription {

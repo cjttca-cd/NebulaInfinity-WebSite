@@ -33,26 +33,26 @@
   font-size: 16px;
 }
 
-/* Variants - Linear style (white buttons with black text) */
+/* Variants */
 .primary {
-  background: #ffffff;
-  color: #000000;
+  background: var(--accent-primary);
+  color: #ffffff;
   font-weight: 500;
-  border: 1px solid var(--border);
+  border: none;
 }
 
 .primary:hover:not(:disabled) {
-  background: #f6f8fa;
-  box-shadow: var(--shadow-md);
+  background: var(--accent-primary-hover);
+  box-shadow: var(--shadow-sm);
 }
 
 .primary:active:not(:disabled) {
   transform: translateY(0);
-  box-shadow: var(--shadow-sm);
+  box-shadow: var(--shadow-xs);
 }
 
 .secondary {
-  background: var(--surface);
+  background: var(--accent-subtle);
   color: var(--text-primary);
   border: 1px solid var(--border);
 }
@@ -60,17 +60,18 @@
 .secondary:hover:not(:disabled) {
   background: var(--surface-hover);
   border-color: var(--border-hover);
+  box-shadow: var(--shadow-xs);
 }
 
 .outline {
   background: transparent;
   color: var(--text-primary);
-  border: 1px solid var(--border);
+  border: 1px solid var(--accent-primary);
 }
 
 .outline:hover:not(:disabled) {
-  background: var(--surface);
-  border-color: var(--border-hover);
+  background: var(--surface-hover);
+  border-color: var(--accent-primary-hover);
 }
 
 .ghost {
@@ -80,7 +81,7 @@
 
 .ghost:hover:not(:disabled) {
   color: var(--text-primary);
-  background: var(--surface);
+  background: var(--surface-hover);
 }
 
 /* Full width */

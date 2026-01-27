@@ -1,5 +1,5 @@
 .footer {
-  background: var(--surface);
+  background: #f5f5f5;
   border-top: 1px solid var(--border);
   padding: 64px 0 24px;
   margin-top: 120px;
@@ -36,7 +36,6 @@
 .logoImage {
   height: 36px;
   width: auto;
-  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.1));
 }
 
 .logoText {
@@ -80,12 +79,11 @@
   color: var(--text-secondary);
   text-decoration: none;
   font-size: 15px;
-  transition: all var(--transition-base);
+  transition: color var(--transition-base);
 }
 
 .link:hover {
   color: var(--text-primary);
-  padding-left: 4px;
 }
 
 .socialLinks {
@@ -99,7 +97,7 @@
   justify-content: center;
   width: 40px;
   height: 40px;
-  background: var(--surface);
+  background: transparent;
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   color: var(--text-secondary);
@@ -108,10 +106,9 @@
 
 .socialLink:hover {
   background: var(--surface-hover);
-  border-color: var(--text-primary);
+  border-color: var(--border-hover);
   color: var(--text-primary);
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-glow);
+  box-shadow: var(--shadow-xs);
 }
 
 .bottom {

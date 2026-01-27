@@ -2,19 +2,19 @@
   padding: 32px;
   border-radius: var(--radius-lg);
   transition: all var(--transition-base);
-  background: var(--card-bg);
-  border: 1px solid var(--card-border);
+  background: var(--background-secondary);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-xs);
 }
 
 .glass {
-  /* Linear style - solid background, not glass */
-  background: var(--surface);
+  background: var(--background-secondary);
   border: 1px solid var(--border);
+  box-shadow: var(--shadow-xs);
 }
 
 .hover:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-md);
   border-color: var(--border-hover);
   background: var(--surface-hover);
 }
