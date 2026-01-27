@@ -7,6 +7,16 @@
   box-shadow: var(--shadow-xs);
 }
 
+.compact {
+  padding: 20px;
+}
+
+.featured {
+  background: linear-gradient(180deg, rgba(202, 138, 4, 0.08), rgba(248, 250, 252, 0.7));
+  box-shadow: var(--shadow-sm);
+  border-color: rgba(202, 138, 4, 0.25);
+}
+
 .glass {
   background: var(--background-secondary);
   border: 1px solid var(--border);
