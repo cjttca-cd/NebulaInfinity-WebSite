@@ -1,0 +1,89 @@
+{
+  "fullDescription": {
+    "ja": "Web3時代の企業財務管理を変革する、AI駆動型財務ダッシュボードです。オンチェーンデータとオフチェーン取引を統合し、仕訳帳、総勘定元帳、試算表などの財務諸表を自動生成します。AIによるOCR領収書読み取りと自動仕訳機能により、経理業務の効率を劇的に向上させます。多言語（日本語、英語、中国語）に完全対応し、グローバルなWeb3ビジネスをサポートします。",
+    "en": "An AI-driven finance dashboard transforming corporate financial management in the Web3 era. Integrates on-chain data with off-chain transactions to automatically generate financial statements like journals, general ledgers, and trial balances. Features AI-powered OCR receipt scanning and automated journal entry generation to dramatically improve accounting efficiency. Fully supports multiple languages (Japanese, English, Chinese) to support global Web3 businesses."
+  },
+  "techStack": [
+    "Next.js & React - Frontend Framework",
+    "Tailwind CSS - Styling",
+    "Web3.js / Ethers.js - Blockchain Integration",
+    "OpenAI API - AI Journaling & OCR",
+    "Vite - Build Tool",
+    "TypeScript - Type Safety",
+    "i18next - Internationalization"
+  ],
+  "architecture": {
+    "image": "/images/projects/rigel-architecture.png",
+    "description": {
+      "ja": "モダンなフロントエンドスタックとAIサービスを統合したセキュアなアーキテクチャ。クライアントサイドでのデータ処理を優先し、プライバシーを保護します。",
+      "en": "Secure architecture integrating modern frontend stack with AI services. Prioritizes client-side data processing to protect privacy."
+    }
+  },
+  "features": [
+    {
+      "ja": "財務諸表自動生成（試算表、総勘定元帳、仕訳帳）",
+      "en": "Auto-generation of financial statements (Trial Balance, General Ledger, Journal)"
+    },
+    {
+      "ja": "AI領収書OCRと自動仕訳",
+      "en": "AI Receipt OCR and Automated Journaling"
+    },
+    {
+      "ja": "月次収支統計ダッシュボード",
+      "en": "Monthly Income/Expense Statistics Dashboard"
+    },
+    {
+      "ja": "多言語対応（日/英/中）と通貨切り替え",
+      "en": "Multi-language support (JP/EN/CN) and currency switching"
+    },
+    {
+      "ja": "CSV / PDF / ZIP データエクスポート",
+      "en": "Data export in CSV / PDF / ZIP formats"
+    },
+    {
+      "ja": "Web3ウォレット連携",
+      "en": "Web3 Wallet Integration"
+    }
+  ],
+  "screenshots": [
+    {
+      "image": "/images/projects/rigel-dashboard.png",
+      "caption": {
+        "ja": "財務概要ダッシュボード",
+        "en": "Financial Overview Dashboard"
+      }
+    },
+    {
+      "image": "/images/projects/rigel-journal.png",
+      "caption": {
+        "ja": "AI自動仕訳画面",
+        "en": "AI Automated Journal Entry Screen"
+      }
+    },
+    {
+      "image": "/images/projects/rigel-reports.png",
+      "caption": {
+        "ja": "詳細レポート（試算表）",
+        "en": "Detailed Reports (Trial Balance)"
+      }
+    }
+  ],
+  "demo": {
+    "url": "https://rigel.nebulainfinity.com",
+    "video": null
+  },
+  "results": {
+    "ja": [
+      "経理作業時間: 70%削減",
+      "仕訳精度: AI学習により継続向上",
+      "対応言語: 3ヶ国語即時切り替え",
+      "レスポンス: 高速なクライアントサイド処理"
+    ],
+    "en": [
+      "Accounting time: Reduced by 70%",
+      "Journaling accuracy: Continuously improving via AI learning",
+      "Languages: Instant switching between 3 languages",
+      "Response: High-speed client-side processing"
+    ]
+  }
+}

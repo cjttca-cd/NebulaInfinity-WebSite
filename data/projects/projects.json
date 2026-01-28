@@ -29,6 +29,21 @@
       },
       "tags": ["AI", "DeFi", "Machine Learning", "Python", "React"],
       "status": "in-progress"
+    },
+    {
+      "id": "rigel-finance-dashboard",
+      "slug": "rigel-finance-dashboard",
+      "name": {
+        "ja": "Rigel - Web3財務管理ダッシュボード",
+        "en": "Rigel - Web3 Finance Management Dashboard"
+      },
+      "icon": "/images/projects/rigel-icon.png",
+      "shortDescription": {
+        "ja": "AIを活用した次世代Web3財務管理ツール。自動仕訳、OCR、多言語レポート生成機能で企業の経理DXを実現。",
+        "en": "Next-gen Web3 finance management tool powered by AI. Enables corporate accounting DX with automated journaling, OCR, and multi-language reporting."
+      },
+      "tags": ["Web3", "AI", "Finance", "React", "Next.js"],
+      "status": "completed"
     }
   ]
 }
